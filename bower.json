@@ -1,0 +1,25 @@
+{
+  "name": "clever-form-builder",
+  "version": "0.0.1",
+  "authors": [
+    "Daniel Durante <me@danieldurante.com>"
+  ],
+  "description": "Form building with AngularJS for CleverStack",
+  "main": "main.js",
+  "license": "MIT",
+  "homepage": "https://github.com/CleverStack/clever-form-builder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "cleverstack",
+    "clevertech",
+    "cleverstack-module",
+    "cleverstack-frontend"
+  ],
+  "rename": "cs_formbuilder"
+}
