@@ -45,8 +45,7 @@ define(['angular', '../module'], function(ng) {
       restrict: 'E',
       scope: {
         field: '=',
-        form: '=',
-        data: '='
+        form: '='
       },
       link: linker
     };

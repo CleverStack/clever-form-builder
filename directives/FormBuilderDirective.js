@@ -9,8 +9,6 @@ define(['angular', '../module'], function(ng) {
       templateUrl: '/modules/cs_formbuilder/views/form/form-builder-template.html',
       restrict: 'E',
       scope: {
-        // form: '=',
-        // data: '=',
         fields: '=',
         ok: '&',
         cancel: '&',
