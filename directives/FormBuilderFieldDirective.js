@@ -3,7 +3,7 @@ define(['angular', '../module'], function(ng) {
 
   ng
   .module('cs_formbuilder.directives')
-  .directive('formBuilderField', function ($http, $compile, t, $rootScope) {
+  .directive('formBuilderField', function ($http, $compile, $rootScope) {
 
     var getTemplateUrl = function (field) {
       var type = field.type
