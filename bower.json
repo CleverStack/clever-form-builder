@@ -1,8 +1,9 @@
 {
   "name": "clever-form-builder",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "authors": [
-    "Daniel Durante <me@danieldurante.com>"
+    "Daniel Durante <me@danieldurante.com>",
+    "Richard Gustin <richard.gustin86@gmail.com>"
   ],
   "description": "Form building with AngularJS for CleverStack",
   "main": "main.js",
@@ -17,7 +18,6 @@
   ],
   "keywords": [
     "cleverstack",
-    "clevertech",
     "cleverstack-module",
     "cleverstack-frontend"
   ],

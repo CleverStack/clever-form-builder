@@ -6,6 +6,7 @@ define(['angular'], function (ng) {
 
   var module = ng.module('cs_formbuilder', [
     'cs_common',
+    'cs_messenger',
     'ui.bootstrap',
     'cs_formbuilder.controllers',
     'cs_formbuilder.directives'

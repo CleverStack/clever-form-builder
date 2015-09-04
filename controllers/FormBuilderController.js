@@ -7,16 +7,12 @@ define( [ 'angular', 'jquery', 'underscore', '../module' ], function( ng, $, _ )
     var Messenger = $injector.has( 'Messenger' ) ? $injector.get( 'Messenger' ) : $injector.get( '$log' );
 
     _.defaults($scope, {
-      data: {
-        firstName: 'Richard',
-        lastName: 'Gustin'
-      },
+      data: {},
       helpers: Helpers,
       change: function(fieldName, value) {
         $scope.data[fieldName] = value;
       },
       save: function() {
-        debugger;
         if ( this.form && this.form.$invalid ) {
           return Messenger.warn( 'Please fix the highlighted form errors and try again.' );
         }
