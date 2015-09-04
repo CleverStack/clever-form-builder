@@ -1,4 +1,4 @@
-define(['angular', 'application'], function (ng) {
+define(['angular', 'app'], function (ng) {
   'use strict';
 
   /**
@@ -9,26 +9,28 @@ define(['angular', 'application'], function (ng) {
    */
   ng.module('cs_formbuilder.directives')
     .directive('formBuilder', [
-      'CSTemplate',
-      function (t) {
+      function () {
         return {
           templateUrl: '/modules/cs_formbuilder/views/form/form-builder-template.html',
           restrict: 'E',
           scope: {
+            // data: '=',
+            // form: '=',
             fields: '=',
             ok: '&',
             cancel: '&',
             button: '@',
             require: '@',
             loaded: '='
-          }
+          },
+          controller: 'FormBuilderController'
         };
       }
     ])
     .directive('formBuilderField', [
       '$http',
       '$compile',
-      'CSTemplate',
+      'Template',
       '$rootScope',
       function ($http, $compile, t, $rootScope) {
 
@@ -37,18 +39,19 @@ define(['angular', 'application'], function (ng) {
             , templateUrl = '';
 
           switch (type) {
-            case 'text':
-              templateUrl = '/modules/cs_formbuilder/views/fields/form-field-text.html';
-              break;
-            case 'date':
-              templateUrl = '/modules/cs_formbuilder/views/fields/form-field-date.html';
-              break;
-            case 'select':
-              templateUrl = '/modules/cs_formbuilder/views/fields/form-field-select.html';
-              break;
-            case 'dropdown-select':
-              templateUrl = '/modules/cs_formbuilder/views/fields/form-field-dropdown-select.html';
-              break;
+
+          case 'text':
+            templateUrl = '/modules/cs_formbuilder/views/fields/form-field-text.html';
+            break;
+          case 'date':
+            templateUrl = '/modules/cs_formbuilder/views/fields/form-field-date.html';
+            break;
+          case 'select':
+            templateUrl = '/modules/cs_formbuilder/views/fields/form-field-select.html';
+            break;
+          case 'dropdown-select':
+            templateUrl = '/modules/cs_formbuilder/views/fields/form-field-dropdown-select.html';
+            break;
           }
 
           return templateUrl;
@@ -70,7 +73,9 @@ define(['angular', 'application'], function (ng) {
           template: '{{ field }}',
           restrict: 'E',
           scope: {
-            field: '='
+            field: '=',
+            form: '=',
+            data: '='
           },
           link: linker
         };

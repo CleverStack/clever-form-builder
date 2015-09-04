@@ -1,11 +1,13 @@
 define(['angular'], function (ng) {
   'use strict';
 
+  ng.module('cs_formbuilder.controllers', []);
   ng.module('cs_formbuilder.directives', []);
 
   var module = ng.module('cs_formbuilder', [
     'cs_common',
     'ui.bootstrap',
+    'cs_formbuilder.controllers',
     'cs_formbuilder.directives'
   ]);
 
