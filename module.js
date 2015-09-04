@@ -12,7 +12,7 @@ define(['angular'], function (ng) {
     'cs_formbuilder.directives'
   ]);
 
-  module.config(['$provide', function ($provide) {
+  module.config(function ($provide, NavbarProvider) {
     var angularBootstrapDirectives = [
       'datepicker',
       'datepickerPopupWrap'
@@ -25,7 +25,21 @@ define(['angular'], function (ng) {
       });
     }
 
-  }]);
+    NavbarProvider.extend({
+      app: [
+        {
+          label:          'Forms',
+          href:           '/forms',
+          class:          'fa-2x fa-th-list',
+          order:          20,
+          display: function() {
+            return true;
+          }
+        }
+      ]
+    });
+
+  });
 
   return module;
 });
