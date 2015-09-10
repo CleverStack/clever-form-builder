@@ -1,0 +1,7 @@
+.form-group
+  label.col-md-3.control-label(ng-show='field.name', for='{{ field.id }}') {{ field.name }}
+  |   {{field.ngModel}}
+  .col-md-4.input-group
+    input.form-control(type='text', id='{{ field.id }}', ng-model='field.ngModel', datepicker-popup='dd-MMMM-yyyy', show-weeks='false', max='maxDate', datepicker-options='dateOptions')
+    span.input-group-addon
+      span.glyphicon.glyphicon-calendar

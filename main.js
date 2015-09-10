@@ -4,5 +4,9 @@ define([
   'cs_common',
   './controllers/FormBuilderController',
   './directives/FormBuilderDirective',
-  './directives/FormBuilderFieldDirective'
+  './directives/FormBuilderFieldDirective',
+  './services/LotPlanSearchService',
+  './services/AddressSearchService',
+  './models/LotPlanModel',
+  './models/AddressSearchModel'
 ], function() {});

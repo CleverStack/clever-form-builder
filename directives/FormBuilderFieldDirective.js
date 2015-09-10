@@ -12,16 +12,16 @@ define(['angular', '../module'], function(ng) {
       switch (type) {
 
       case 'text':
-        templateUrl = '/modules/cs_formbuilder/views/fields/form-field-text.html';
+        templateUrl = '/modules/cs_formbuilder/views/fields/text.html';
         break;
       case 'date':
-        templateUrl = '/modules/cs_formbuilder/views/fields/form-field-date.html';
+        templateUrl = '/modules/cs_formbuilder/views/fields/date.html';
         break;
       case 'select':
-        templateUrl = '/modules/cs_formbuilder/views/fields/form-field-select.html';
+        templateUrl = '/modules/cs_formbuilder/views/fields/select.html';
         break;
       case 'dropdown-select':
-        templateUrl = '/modules/cs_formbuilder/views/fields/form-field-dropdown-select.html';
+        templateUrl = '/modules/cs_formbuilder/views/fields/dropdown-select.html';
         break;
       }
 

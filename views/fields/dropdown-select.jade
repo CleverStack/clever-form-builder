@@ -1,0 +1,4 @@
+.form-group
+  label.col-md-3.control-label(ng-show='field.name', for='{{ field.id }}') {{ field.name }}
+  .col-md-4
+    dropdown-select(ng-model='field.ngModel', dropdown-list='field.data', id='{{ field.id }}', ng-required='field.required')

@@ -1,0 +1,5 @@
+.form-group
+  label.col-md-3.control-label(ng-show='field.name', for='{{ field.id }}') {{ field.name }}
+  .col-md-4
+    select.form-control(id='{{ field.id }}', ng-model='field.ngModel', ng-required='field.required')
+      option(ng-repeat='item in field.options') {{ item }}

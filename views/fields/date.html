@@ -1,0 +1,7 @@
+
+<div class="form-group">
+  <label ng-show="field.name" for="{{ field.id }}" class="col-md-3 control-label">{{ field.name }}</label>  {{field.ngModel}}
+  <div class="col-md-4 input-group">
+    <input type="text" id="{{ field.id }}" ng-model="field.ngModel" datepicker-popup="dd-MMMM-yyyy" show-weeks="false" max="maxDate" datepicker-options="dateOptions" class="form-control"/><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+  </div>
+</div>
